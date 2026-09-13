@@ -32,4 +32,4 @@ public class IpSwitchMod extends Mod {
             Log.err("[IP Switch] config err: @", t.getMessage());
         }
     }
-}.
+}
