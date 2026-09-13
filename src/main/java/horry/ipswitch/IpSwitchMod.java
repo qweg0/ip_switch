@@ -1,4 +1,4 @@
-```java
+
 package horry.ipswitch;
 
 import arc.Core;
@@ -57,6 +57,3 @@ public class IpSwitchMod extends Mod {
         commands.register(handler);
     }
 }
-```
-
----
