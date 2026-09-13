@@ -1,4 +1,4 @@
-```java
+
 package horry.ipswitch;
 
 import arc.util.Log;
@@ -94,6 +94,3 @@ public class SocksConnector {
         return buf;
     }
 }
-```
-
----
