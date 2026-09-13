@@ -1,4 +1,4 @@
-```java
+
 package horry.ipswitch;
 
 import arc.util.Log;
@@ -88,6 +88,3 @@ public class SocketHook {
         return false;
     }
 }
-```
-
----
