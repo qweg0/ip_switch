@@ -1,0 +1,10 @@
+```hjson
+name: ip_switch
+displayName: "IP Switch"
+author: Horry
+description: "Переключение исходящего IP через SOCKS5 прямо в игре. Профили прокси, смена UUID, обход IP-бана."
+version: "1.1.0"
+minGameVersion: "146"
+main: horry.ipswitch.IpSwitchMod
+hidden: false
+```
