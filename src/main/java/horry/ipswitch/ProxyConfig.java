@@ -1,4 +1,4 @@
-```java
+
 package horry.ipswitch;
 
 import arc.files.Fi;
@@ -129,6 +129,3 @@ public class ProxyConfig {
         return proxies.values().toSeq();
     }
 }
-```
-
----
