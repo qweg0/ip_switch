@@ -1,6 +1,4 @@
-src/main/java/horry/ipswitch/SwitchCommand.java
 
-```java
 package horry.ipswitch;
 
 import arc.util.CommandHandler;
@@ -107,6 +105,3 @@ public class SwitchCommand {
         } catch (Throwable ignored) {}
     }
 }
-```
-
----
