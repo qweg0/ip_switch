@@ -111,12 +111,10 @@ public class IpSwitchMenu {
 
         add.cont.add("[lightgray]Имя профиля:[]").left().row();
         TextField nameField = new TextField("");
-        nameField.setMessageText("main");
         add.cont.add(nameField).width(600f).row();
 
         add.cont.add("[lightgray]Хост (IP или домен):[]").left().row();
         TextField hostField = new TextField("");
-        hostField.setMessageText("1.2.3.4");
         add.cont.add(hostField).width(600f).row();
 
         add.cont.add("[lightgray]Порт:[]").left().row();
@@ -129,8 +127,6 @@ public class IpSwitchMenu {
 
         add.cont.add("[lightgray]Пароль (если нужен):[]").left().row();
         TextField passField = new TextField("");
-        passField.setPasswordMode(true);
-        passField.setPasswordCharacter('*');
         add.cont.add(passField).width(600f).row();
 
         add.cont.table(btns -> {
