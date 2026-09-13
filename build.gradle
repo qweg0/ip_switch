@@ -7,14 +7,14 @@ version = '1.1.0'
 
 repositories {
     mavenCentral()
+    maven { url 'https://maven.anuke.com/releases' }
     maven { url 'https://jitpack.io' }
-    maven { url 'https://raw.githubusercontent.com/Anuken/MindustryMaven/master/' }
 }
 
 dependencies {
-    compileOnly "com.github.Anuken.Arc:arc-core:master-SNAPSHOT"
-    compileOnly "com.github.Anuken.Mindustry:core:master-SNAPSHOT"
-    compileOnly "com.github.Anuken.Mindustry:desktop:master-SNAPSHOT"
+    compileOnly "mindustry:core:v146"
+    compileOnly "mindustry:desktop:v146"
+    compileOnly "arc:arc-core:v146"
 }
 
 jar {
