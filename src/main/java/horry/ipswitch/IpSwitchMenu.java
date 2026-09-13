@@ -1,6 +1,5 @@
 package horry.ipswitch;
 
-import arc.Core;
 import arc.scene.ui.TextField;
 import arc.scene.ui.layout.Table;
 import arc.util.Log;
@@ -31,7 +30,6 @@ public class IpSwitchMenu {
         ProxyConfig.Proxy active = IpSwitchMod.config.active();
 
         t.table(st -> {
-            st.background(Core.scene.getStyle(arc.scene.style.Drawable.class, "black6"));
             st.left().defaults().pad(6f).left();
 
             st.add("[lightgray]Статус:[] ").left();
