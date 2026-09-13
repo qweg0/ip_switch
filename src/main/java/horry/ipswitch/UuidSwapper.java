@@ -1,4 +1,4 @@
-```java
+
 package horry.ipswitch;
 
 import arc.util.Log;
@@ -39,6 +39,3 @@ public class UuidSwapper {
         Log.info("[IP Switch] UUID вернётся к стандартному при следующем запуске");
     }
 }
-```
-
----
