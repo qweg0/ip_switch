@@ -1,4 +1,3 @@
-
 name: Build Mod
 on:
   push:
@@ -14,10 +13,35 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+
+      - name: Generate keystore
+        run: |
+          keytool -genkeypair -v \
+            -keystore keystore.jks \
+            -alias mykey \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -storepass android \
+            -keypass android \
+            -dname "CN=IP Switch, OU=Mod, O=Horry, L=Space, S=Space, C=RU"
+
       - name: Build with Gradle
         run: gradle jar --no-daemon
+
+      - name: Sign JAR
+        run: |
+          jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 \
+            -keystore keystore.jks \
+            -storepass android \
+            -keypass android \
+            build/libs/ip_switch.jar mykey
+
+      - name: Rename to signed
+        run: mv build/libs/ip_switch.jar build/libs/ip_switch-signed.jar
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: ip_switch
-          path: build/libs/*.jar
+          path: build/libs/ip_switch-signed.jar
