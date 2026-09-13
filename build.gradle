@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'horry'
+version = '1.1.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://raw.githubusercontent.com/Anuken/MindustryMaven/master/' }
+}
+
+dependencies {
+    compileOnly "com.github.Anuken.Arc:arc-core:v146"
+    compileOnly "com.github.Anuken.Mindustry:core:v146"
+    compileOnly "com.github.Anuken.Mindustry:desktop:v146"
+}
+
+jar {
+    archiveFileName = "ip_switch.jar"
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes 'Main-Class': 'horry.ipswitch.IpSwitchMod'
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
